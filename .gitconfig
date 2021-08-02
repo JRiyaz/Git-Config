@@ -1,0 +1,52 @@
+[user]
+	email = jriyaz@zeomega.com
+	name = jriyaz
+[core]
+	editor = gedit
+[apply]
+#    whitespace=fix
+[alias]
+    st = status
+    ci = commit
+    amend = commit --amend
+    co = checkout
+    br = branch
+    lg = log --graph --date=short --date-order
+    pur = pull --rebase
+    prom = pull --rebase origin master
+    pom = push origin master
+    what = whatchanged -p
+    df = diff --color-words
+    di = diff --ignore-space-change
+    staged = diff --cached
+    unstage = reset HEAD
+    credits = shortlog -sn --no-merges
+    changelog = log --pretty=oneline --abbrev-commit --graph
+[color]
+    branch = auto
+    diff = auto
+    interactive = auto
+    ui = always
+    pager = true
+[color "status"]
+    untracked = black
+    changed = red
+    added = green
+[format]
+    pretty="%Cgreen%h %Cred%ar %Cblue<%an> %C(yellow)%d %Creset%s %Cred(%ad)"
+[core]
+    editor = /usr/bin/vim
+    # autocrlf = input
+    pager = less -FRSX
+    # whitespace = fix
+    safecrlf = warn
+    filemode = false
+ [diff]
+    mnemonicprefix = true
+    renames = copies
+ [merge]
+ stat = true
+ verbosity = 1
+ summary = true
+ log = true                                                                                                                          
+ 
