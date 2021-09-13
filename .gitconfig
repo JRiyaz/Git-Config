@@ -35,7 +35,7 @@
 [format]
     pretty="%Cgreen%h %Cred%ar %Cblue<%an> %C(yellow)%d %Creset%s %Cred(%ad)"
 [core]
-    editor = /usr/bin/vim
+    editor = /usr/bin/gedit
     # autocrlf = input
     pager = less -FRSX
     # whitespace = fix
@@ -50,3 +50,65 @@
  summary = true
  log = true                                                                                                                          
  
+
+#  In windows
+
+[diff "astextplain"]
+	textconv = astextplain
+	mnemonicprefix = true
+    renames = copies
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[http]
+	sslBackend = openssl
+	sslCAInfo = C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+[core]
+	autocrlf = true
+	fscache = true
+	symlinks = false
+	editor = \"C:\\\\Program Files (x86)\\\\Notepad++\\\\notepad++.exe\" -multiInst -notabbar -nosession -noPlugin
+[pull]
+	rebase = false
+[credential]
+	helper = manager-core
+[credential "https://dev.azure.com"]
+	useHttpPath = true
+[init]
+	defaultBranch = main
+[alias]
+    st = status
+    ci = commit
+    amend = commit --amend
+    co = checkout
+    br = branch
+    lg = log --graph --date=short --date-order
+    pur = pull --rebase
+    prom = pull --rebase origin master
+    pom = push origin master
+    what = whatchanged -p
+    df = diff --color-words
+    di = diff --ignore-space-change
+    staged = diff --cached
+    unstage = reset HEAD
+    credits = shortlog -sn --no-merges
+    changelog = log --pretty=oneline --abbrev-commit --graph
+[color]
+    branch = auto
+    diff = auto
+    interactive = auto
+    ui = always
+    pager = true
+[color "status"]
+    untracked = black
+    changed = red
+    added = green
+[format]
+    pretty="%Cgreen%h %Cred%ar %Cblue<%an> %C(yellow)%d %Creset%s %Cred(%ad)"
+ [merge]
+ stat = true
+ verbosity = 1
+ summary = true
+ log = true
