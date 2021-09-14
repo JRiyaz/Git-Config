@@ -21,6 +21,8 @@ alias git-s='git status -s'
 alias git-stat='git log --stat'  
 alias git-sw='git switch -C'   
 
+alias start-win='xfreerdp --plugin cliprdr -u jriyaz-g 1296x682 172.27.2.11'
+
 alias setup-jiva='sudo yum install gcc gcc-c++ make openssl-devel bzip2-devel zlib-devel readline readline-devel libxml2-devel libxslt-devel glib2-devel enchant unixODBC libevent-devel python-devel unixODBC-devel libaio sqlite-devel libffi-devel db4-devel'  
 alias setup-py='./installpy27.sh -s' 
 
